@@ -1,0 +1,55 @@
+.explore-section {
+  width: min(1100px, 92%);
+
+  margin: 90px auto;
+
+  text-align: center;
+}
+
+.explore-section h2 {
+  font-size: 2.2rem;
+
+  margin-bottom: 20px;
+
+  color: white;
+}
+
+.explore-section p {
+  max-width: 720px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-bottom: 40px;
+}
+
+.explore-button {
+  display: inline-block;
+
+  padding: 18px 50px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: white;
+
+  background: linear-gradient(45deg, #8a2be2, #00bfff);
+
+  transition: 0.35s;
+}
+
+.explore-button:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 0 18px rgba(138, 43, 226, 0.35),
+    0 0 30px rgba(0, 191, 255, 0.25);
+}

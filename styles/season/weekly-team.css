@@ -1,0 +1,238 @@
+.weekly-team-section {
+  width: min(1200px, 92%);
+
+  margin: 100px auto;
+}
+
+/*============================*/
+/* GRID */
+/*============================*/
+
+.fighters-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1.12fr 1fr;
+
+  gap: 32px;
+
+  align-items: end;
+
+  margin-top: 60px;
+}
+
+/*============================*/
+/* TARJETAS */
+/*============================*/
+
+.fighter-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 28px;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(18px);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  box-shadow:
+    0 0 18px rgba(138, 43, 226, 0.1),
+    0 0 35px rgba(0, 191, 255, 0.05);
+}
+
+.fighter-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    0 0 25px rgba(138, 43, 226, 0.2),
+    0 0 45px rgba(0, 191, 255, 0.18);
+}
+
+/*============================*/
+/* CARTA PRINCIPAL */
+/*============================*/
+
+.featured {
+  transform: scale(1.06);
+
+  border: 2px solid rgba(255, 215, 0, 0.35);
+
+  box-shadow:
+    0 0 30px rgba(255, 215, 0, 0.18),
+    0 0 55px rgba(255, 215, 0, 0.1);
+}
+
+.featured:hover {
+  transform: translateY(-10px) scale(1.08);
+}
+
+/*============================*/
+/* BADGE */
+/*============================*/
+
+.fighter-badge {
+  padding: 7px 18px;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+
+  color: #78dcff;
+
+  background: rgba(0, 191, 255, 0.1);
+
+  border: 1px solid rgba(0, 191, 255, 0.25);
+}
+
+.featured-badge {
+  color: #ffe27a;
+
+  background: rgba(255, 215, 0, 0.12);
+
+  border-color: rgba(255, 215, 0, 0.35);
+}
+
+/*============================*/
+/* IMAGEN */
+/*============================*/
+
+.fighter-image {
+  width: 100%;
+
+  border-radius: 20px;
+
+  margin-bottom: 22px;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+}
+
+.fighter-card:hover .fighter-image {
+  transform: scale(1.04);
+
+  filter: brightness(1.08);
+}
+
+/*============================*/
+/* TEXTO */
+/*============================*/
+
+.fighter-card h3 {
+  font-size: 2rem;
+
+  color: white;
+
+  margin-bottom: 6px;
+}
+
+.fighter-variant {
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  color: #72d9ff;
+
+  margin-bottom: 20px;
+}
+
+.fighter-card p {
+  color: rgba(255, 255, 255, 0.74);
+
+  text-align: center;
+
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+/*============================*/
+/* INFO */
+/*============================*/
+
+.fighter-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  gap: 25px;
+}
+
+.fighter-info div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.fighter-info strong {
+  color: white;
+
+  font-size: 0.9rem;
+}
+
+.fighter-info span {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.88rem;
+}
+
+/*============================*/
+/* RESPONSIVE */
+/*============================*/
+
+@media (max-width: 960px) {
+  .fighters-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 520px;
+
+    margin: auto;
+
+    margin-top: 50px;
+  }
+
+  .featured {
+    order: -1;
+
+    transform: scale(1);
+  }
+
+  .featured:hover {
+    transform: translateY(-8px);
+  }
+
+  .fighter-card {
+    padding: 24px;
+  }
+}

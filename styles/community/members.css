@@ -1,0 +1,456 @@
+/* =========================================
+   MIEMBROS ACTUALES
+========================================= */
+
+.community-members {
+  width: min(1400px, 96%);
+  margin: 70px auto;
+
+  padding: clamp(22px, 3vw, 42px);
+
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.88),
+    rgba(2, 6, 23, 0.96)
+  );
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 35px rgba(0, 0, 0, 0.45),
+    inset 0 0 35px rgba(168, 85, 247, 0.025);
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.current-members_header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.current-members_footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.current-members_header span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 1.8rem;
+}
+
+.current-members_header h2 {
+  margin: 0 0 8px;
+
+  color: #f5f3ff;
+
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.55);
+}
+
+.current-members_header p {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+.current-members_footer p {
+  max-width: 720px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   GRID DE MIEMBROS
+========================================= */
+
+.members-grid {
+  display: grid;
+
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: clamp(12px, 1.4vw, 22px);
+}
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.member-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 8px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.85),
+    rgba(15, 23, 42, 0.95)
+  );
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Eliminamos el estilo por defecto del botón */
+
+.member-card {
+  font: inherit;
+  color: inherit;
+}
+
+/* Hover */
+
+@media (hover: hover) {
+  .member-card:hover {
+    transform: translateY(-6px) scale(1.04);
+
+    border-color: rgba(168, 85, 247, 0.85);
+
+    box-shadow:
+      0 0 16px rgba(168, 85, 247, 0.35),
+      0 0 30px rgba(99, 102, 241, 0.15);
+  }
+}
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.member-avatar-wrapper {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.member-avatar {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.35s ease;
+}
+
+.member-card:hover .member-avatar {
+  transform: scale(1.08);
+}
+
+/* =========================================
+   NOMBRE
+========================================= */
+
+.member-name {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #e2e8f0;
+
+  font-size: clamp(0.65rem, 1vw, 0.8rem);
+
+  text-align: center;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+   MODAL — FONDO
+========================================= */
+
+.member-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(2, 6, 23, 0.78);
+
+  backdrop-filter: blur(12px);
+
+  animation: modalOverlayAppear 0.25s ease forwards;
+}
+
+/* =========================================
+   MODAL — CONTENIDO
+========================================= */
+
+.member-modal {
+  position: relative;
+
+  width: min(520px, 100%);
+
+  max-height: min(720px, 90vh);
+
+  overflow-y: auto;
+
+  padding: 34px 30px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.98),
+    rgba(2, 6, 23, 0.99)
+  );
+
+  border: 1px solid rgba(168, 85, 247, 0.45);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 35px rgba(168, 85, 247, 0.35),
+    0 0 80px rgba(99, 102, 241, 0.15);
+
+  animation: memberModalAppear 0.3s ease forwards;
+}
+
+/* =========================================
+   BOTÓN DE CIERRE
+========================================= */
+
+.member-modal-close {
+  position: absolute;
+
+  top: 14px;
+  right: 18px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
+  color: #94a3b8;
+
+  font-size: 1.8rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.member-modal-close:hover {
+  color: white;
+
+  transform: rotate(90deg);
+}
+
+/* =========================================
+   AVATAR DEL MODAL
+========================================= */
+
+.member-modal-avatar-wrapper {
+  width: 130px;
+  height: 130px;
+
+  margin: 0 auto 18px;
+
+  padding: 5px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #a855f7, #6366f1, #c084fc);
+
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+}
+
+.member-modal-avatar {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+/* =========================================
+   NOMBRE DEL MIEMBRO
+========================================= */
+
+.member-modal h3 {
+  margin: 0 0 12px;
+
+  color: #f5f3ff;
+
+  font-size: 1.7rem;
+
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.45);
+}
+
+/* =========================================
+   MENSAJE PERSONAL
+========================================= */
+
+.member-message {
+  margin: 0 auto 26px;
+
+  max-width: 420px;
+
+  color: #cbd5e1;
+
+  font-size: 0.98rem;
+
+  line-height: 1.7;
+
+  font-style: italic;
+}
+
+/* =========================================
+   ESTADÍSTICAS
+========================================= */
+
+.member-stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.member-stat {
+  padding: 14px 10px;
+
+  background: rgba(30, 41, 59, 0.55);
+
+  border: 1px solid rgba(148, 163, 184, 0.14);
+
+  border-radius: 12px;
+}
+
+.member-stat span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #94a3b8;
+
+  font-size: 0.72rem;
+}
+
+.member-stat strong {
+  display: block;
+
+  color: #e9d5ff;
+
+  font-size: 0.9rem;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes modalOverlayAppear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes memberModalAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+  .community-members {
+    width: 94%;
+
+    padding: 20px 14px;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fit, minmax(82px, 1fr));
+
+    gap: 12px;
+  }
+
+  .member-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .members-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

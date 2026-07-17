@@ -1,0 +1,168 @@
+/* =========================================
+   FOTOS DEL CHAT
+========================================= */
+
+.gallery-chat {
+  width: min(1050px, 94%);
+
+  margin: 80px auto;
+
+  text-align: center;
+  margin-top: 150px;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.gallery-chat__header {
+  margin-bottom: 32px;
+}
+
+.gallery-chat__header span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 2rem;
+}
+
+.gallery-chat__header h2 {
+  margin: 0 0 10px;
+
+  color: #f8fafc;
+
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+  text-shadow:
+    0 0 12px rgba(59, 130, 246, 0.55),
+    0 0 28px rgba(59, 130, 246, 0.2);
+}
+
+.gallery-chat__header p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   TARJETA
+========================================= */
+
+.gallery-chat-card {
+  padding: clamp(18px, 3vw, 32px);
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.96),
+    rgba(2, 6, 23, 0.98)
+  );
+
+  border: 1px solid rgba(59, 130, 246, 0.3);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 28px rgba(59, 130, 246, 0.12),
+    inset 0 0 30px rgba(59, 130, 246, 0.025);
+}
+
+/* =========================================
+   DESCRIPCIÓN
+========================================= */
+
+.gallery-chat-card__description {
+  max-width: 780px;
+
+  margin: 0 auto 24px;
+
+  color: #cbd5e1;
+
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   CAPTURA
+========================================= */
+
+.gallery-chat-card img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  max-height: 650px;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  border-radius: 14px;
+
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.5);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-chat-card img:hover {
+  transform: scale(1.01);
+
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.22);
+}
+
+/* =========================================
+   TÍTULO DE LA CAPTURA
+========================================= */
+
+.gallery-chat-card__title {
+  margin-top: 24px;
+
+  color: #f1f5f9;
+
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .gallery-chat {
+    width: 94%;
+
+    margin: 55px auto;
+  }
+
+  .gallery-chat-card {
+    padding: 14px;
+
+    border-radius: 18px;
+  }
+
+  .gallery-chat-card img {
+    max-height: 520px;
+
+    border-radius: 11px;
+  }
+
+  .gallery-chat-card__description {
+    margin-bottom: 18px;
+
+    font-size: 0.92rem;
+  }
+}

@@ -1,0 +1,282 @@
+.boss-season {
+  width: min(1200px, 92%);
+
+  margin: 100px auto;
+}
+
+/*====================================*/
+/* DISTRIBUCIÓN PRINCIPAL */
+/*====================================*/
+
+.boss-layout {
+  display: grid;
+
+  grid-template-columns: 420px 1fr;
+
+  gap: 45px;
+
+  align-items: center;
+}
+
+/*====================================*/
+/* IMAGEN */
+/*====================================*/
+
+.boss-image {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.boss-image img {
+  width: 100%;
+
+  max-width: 420px;
+
+  transition: transform 0.45s ease;
+
+  filter: drop-shadow(0 0 28px rgba(0, 191, 255, 0.2));
+}
+
+.boss-image img:hover {
+  transform: scale(1.03);
+}
+
+/*====================================*/
+/* INFORMACIÓN */
+/*====================================*/
+
+.boss-content {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.boss-tag {
+  width: fit-content;
+
+  padding: 8px 18px;
+
+  margin-bottom: 18px;
+
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #72d9ff;
+
+  background: rgba(0, 191, 255, 0.1);
+
+  border: 1px solid rgba(0, 191, 255, 0.25);
+}
+
+.boss-content h2 {
+  color: white;
+
+  font-size: 2.6rem;
+
+  margin-bottom: 14px;
+}
+
+.boss-description {
+  color: rgba(255, 255, 255, 0.75);
+
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+}
+
+.boss-duration {
+  display: inline-flex;
+
+  gap: 12px;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  color: white;
+}
+
+.boss-duration strong {
+  color: white;
+}
+
+.boss-duration span {
+  color: #73d8ff;
+}
+
+/*====================================*/
+/* MODIFICADORES */
+/*====================================*/
+
+.boss-modifiers {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.modifier-card {
+  position: relative;
+
+  padding: 18px 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(16px);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow:
+    0 0 12px rgba(138, 43, 226, 0.08),
+    0 0 24px rgba(0, 191, 255, 0.05);
+}
+
+.modifier-card:hover {
+  transform: translateX(6px);
+
+  border-color: rgba(0, 191, 255, 0.35);
+
+  box-shadow:
+    0 0 18px rgba(138, 43, 226, 0.15),
+    0 0 35px rgba(0, 191, 255, 0.12);
+}
+
+.modifier-code {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  padding: 5px 14px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #8a2be2, #00bfff);
+
+  color: white;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.modifier-card h4 {
+  color: white;
+
+  margin-bottom: 10px;
+
+  font-size: 1.05rem;
+}
+
+.modifier-card p {
+  color: rgba(255, 255, 255, 0.72);
+
+  line-height: 1.7;
+
+  font-size: 0.95rem;
+}
+
+/*====================================*/
+/* RESPONSIVE */
+/*====================================*/
+
+@media (max-width: 950px) {
+  .boss-layout {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .boss-image {
+    order: -1;
+  }
+
+  .boss-tag {
+    margin-inline: auto;
+  }
+
+  .boss-duration {
+    justify-content: center;
+  }
+}
+
+/*====================================*/
+/* COLORES DE MODIFICADORES */
+/*====================================*/
+
+.modifier-card {
+  overflow: hidden;
+}
+
+.modifier-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 6px;
+
+  height: 100%;
+
+  border-radius: 20px;
+}
+
+/* SA1 */
+
+.modifier-1::before {
+  background: #39d353;
+
+  box-shadow: 0 0 15px #39d353;
+}
+
+/* SA2 */
+
+.modifier-2::before {
+  background: #ffd43b;
+
+  box-shadow: 0 0 15px #ffd43b;
+}
+
+/* SA3 */
+
+.modifier-3::before {
+  background: #ff5a5a;
+
+  box-shadow: 0 0 15px #ff5a5a;
+}
+
+/* SA4 */
+
+.modifier-4::before {
+  background: #42a5ff;
+
+  box-shadow: 0 0 15px #42a5ff;
+}
+
+/* SA5 */
+
+.modifier-5::before {
+  background: #b46cff;
+
+  box-shadow: 0 0 15px #b46cff;
+}

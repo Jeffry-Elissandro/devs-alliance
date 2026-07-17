@@ -1,0 +1,94 @@
+.error-feedback {
+  width: min(900px, 92%);
+
+  margin: 90px auto;
+
+  padding: 50px 40px;
+
+  text-align: center;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.04);
+}
+
+.feedback-kicker {
+  display: block;
+
+  color: #8ed8ff;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 14px;
+}
+
+.feedback-content h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.feedback-content p {
+  max-width: 680px;
+
+  margin: 18px auto 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  line-height: 1.7;
+}
+
+.feedback-button {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  padding: 13px 24px;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(80, 130, 255, 0.8),
+    rgba(150, 100, 255, 0.8)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 0 18px rgba(100, 130, 255, 0.2);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.feedback-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 0 28px rgba(120, 150, 255, 0.4);
+}
+
+@media (max-width: 600px) {
+  .error-feedback {
+    padding: 36px 22px;
+  }
+}

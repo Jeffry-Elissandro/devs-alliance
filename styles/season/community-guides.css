@@ -1,0 +1,252 @@
+.community-guides-section {
+  width: min(1200px, 92%);
+
+  margin: 100px auto;
+}
+
+.guides-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 50px;
+
+  margin-top: 50px;
+}
+
+/*============================*/
+/* TARJETA */
+/*============================*/
+
+.guide-card {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+
+  padding: 35px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 18px rgba(138, 43, 226, 0.12),
+    0 0 35px rgba(0, 191, 255, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(0, 191, 255, 0.35);
+
+  box-shadow:
+    0 0 22px rgba(138, 43, 226, 0.18),
+    0 0 45px rgba(0, 191, 255, 0.15);
+}
+
+.guide-card.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.guide-card.reverse .guide-info {
+  order: 2;
+}
+
+.guide-card.reverse .guide-video {
+  order: 1;
+}
+
+/*============================*/
+/* INFORMACIÓN */
+/*============================*/
+
+.guide-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  height: 100%;
+}
+
+.guide-tag {
+  display: inline-flex;
+
+  width: max-content;
+
+  padding: 8px 18px;
+
+  margin-bottom: 18px;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #6fd8ff;
+
+  background: rgba(0, 191, 255, 0.1);
+
+  border: 1px solid rgba(0, 191, 255, 0.25);
+
+  border-radius: 999px;
+
+  text-transform: uppercase;
+}
+
+.guide-info h3 {
+  color: white;
+
+  font-size: 2rem;
+
+  margin-bottom: 18px;
+}
+
+.guide-info p {
+  color: rgba(255, 255, 255, 0.75);
+
+  line-height: 1.8;
+
+  margin-bottom: 30px;
+}
+
+.guide-meta {
+  display: flex;
+
+  gap: 50px;
+
+  margin-bottom: 30px;
+
+  flex-wrap: wrap;
+}
+
+.guide-meta div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.guide-meta strong {
+  color: white;
+
+  font-size: 0.95rem;
+}
+
+.guide-meta span {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/*============================*/
+/* VIDEO */
+/*============================*/
+
+.guide-video {
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  border: 2px solid rgba(0, 191, 255, 0.2);
+
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.15);
+}
+
+.guide-video iframe {
+  width: 100%;
+
+  aspect-ratio: 16/9;
+
+  display: block;
+
+  border: none;
+}
+
+/*============================*/
+/* BOTÓN */
+/*============================*/
+
+.youtube-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: max-content;
+
+  padding: 14px 30px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  color: white;
+
+  background: linear-gradient(135deg, #8a2be2, #00bfff);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow: 0 0 16px rgba(0, 191, 255, 0.2);
+}
+
+.youtube-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 0 28px rgba(0, 191, 255, 0.4);
+}
+
+/*============================*/
+/* RESPONSIVE */
+/*============================*/
+
+@media (max-width: 900px) {
+  .guide-card {
+    grid-template-columns: 1fr;
+
+    padding: 28px;
+  }
+
+  .guide-card.reverse .guide-info {
+    order: 2;
+  }
+
+  .guide-card.reverse .guide-video {
+    order: 1;
+  }
+
+  .guide-info {
+    text-align: center;
+
+    align-items: center;
+  }
+
+  .guide-meta {
+    justify-content: center;
+  }
+
+  .youtube-button {
+    width: 100%;
+
+    max-width: 320px;
+  }
+}

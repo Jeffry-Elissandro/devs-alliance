@@ -1,0 +1,128 @@
+/* =========================================
+   INCORPORACIONES
+========================================= */
+
+.community-additions {
+  width: min(1050px, 94%);
+
+  margin: 70px auto;
+
+  text-align: center;
+}
+
+.community-additions__title {
+  margin-bottom: 30px;
+
+  color: #f8fafc;
+
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.55),
+    0 0 28px rgba(168, 85, 247, 0.35);
+}
+
+/* =========================================
+   TARJETA DE INCORPORACIÓN
+========================================= */
+
+.addition-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  margin-bottom: 20px;
+
+  padding: 22px 26px;
+
+  text-align: left;
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(30, 27, 75, 0.8)
+  );
+
+  border: 1px solid rgba(168, 85, 247, 0.4);
+
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.addition-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(216, 180, 254, 0.85);
+
+  box-shadow: 0 0 28px rgba(168, 85, 247, 0.4);
+}
+
+/* Avatar */
+
+.addition-card__avatar {
+  width: 90px;
+  height: 90px;
+
+  flex-shrink: 0;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(168, 85, 247, 0.8);
+
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.55);
+}
+
+/* Nombre */
+
+.addition-card__name {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.addition-card__name-highlight {
+  color: #d8b4fe;
+
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.65);
+}
+
+/* Mensaje */
+
+.addition-card__message {
+  margin-top: 8px;
+
+  color: #c7d2fe;
+
+  font-size: 0.95rem;
+
+  line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .addition-card {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 24px 18px;
+  }
+
+  .addition-card__avatar {
+    width: 82px;
+    height: 82px;
+  }
+}

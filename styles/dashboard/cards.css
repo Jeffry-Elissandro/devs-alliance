@@ -1,0 +1,127 @@
+.dashboard-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: white;
+
+  padding: 28px;
+
+  border-radius: 28px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+
+  box-shadow:
+    0 0 20px rgba(138, 43, 226, 0.1),
+    0 0 40px rgba(0, 191, 255, 0.05);
+
+  opacity: 0;
+
+  animation: cardEntrance 0.7s ease forwards;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-10px);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 0 30px rgba(138, 43, 226, 0.3),
+    0 0 50px rgba(0, 191, 255, 0.2);
+}
+
+.dashboard-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    transparent 45%
+  );
+
+  opacity: 0;
+
+  transition: 0.35s;
+}
+
+.dashboard-card:hover::before {
+  opacity: 1;
+}
+
+.dashboard-card-image {
+  width: 240px;
+
+  height: 240px;
+
+  object-fit: contain;
+
+  margin-bottom: 1px;
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.dashboard-card:hover .dashboard-card-image {
+  transform: translateY(-5px) scale(1.06);
+
+  filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.4));
+}
+
+.dashboard-card-button {
+  margin-top: 18px;
+
+  letter-spacing: 3px;
+
+  font-weight: bold;
+
+  opacity: 0.8;
+
+  transition: 0.35s;
+}
+
+.dashboard-card:hover .dashboard-card-button {
+  opacity: 1;
+
+  letter-spacing: 4px;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+
+    transform: translateY(35px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,75 @@
+.placeholder-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 40px;
+}
+
+.placeholder-card {
+  width: min(700px, 90%);
+
+  padding: 60px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 0 25px rgba(138, 43, 226, 0.15),
+    0 0 45px rgba(0, 191, 255, 0.08);
+}
+
+.placeholder-card h1 {
+  font-size: 2.8rem;
+
+  margin-bottom: 20px;
+
+  letter-spacing: 4px;
+}
+
+.placeholder-card p {
+  opacity: 0.75;
+
+  line-height: 1.7;
+
+  margin-bottom: 40px;
+}
+
+.placeholder-button {
+  display: inline-block;
+
+  padding: 16px 40px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  background: linear-gradient(45deg, #8a2be2, #00bfff);
+
+  transition: 0.3s;
+}
+
+.placeholder-button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 0 20px rgba(138, 43, 226, 0.4),
+    0 0 30px rgba(0, 191, 255, 0.3);
+}

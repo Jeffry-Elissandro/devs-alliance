@@ -1,0 +1,181 @@
+.weekly-results {
+  width: min(1100px, 92%);
+  margin: 80px auto;
+}
+
+.results-header {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.results-kicker {
+  display: block;
+
+  color: #72d7ff;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.results-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.results-header p {
+  max-width: 720px;
+
+  margin: 16px auto 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  line-height: 1.7;
+}
+
+.results-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.result-row {
+  display: grid;
+
+  grid-template-columns:
+    190px
+    1fr
+    100px;
+
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 22px 24px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.result-row:hover {
+  transform: translateX(5px);
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border-color: rgba(114, 215, 255, 0.3);
+}
+
+.result-member {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.result-member strong {
+  color: #ffffff;
+
+  font-size: 1rem;
+}
+
+.result-member span {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.8rem;
+}
+
+.result-metrics {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.metric-label {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 4px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.75rem;
+}
+
+.metric-label strong {
+  color: #ffffff;
+}
+
+.metric-bar {
+  height: 7px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.metric-bar span {
+  display: block;
+
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: linear-gradient(90deg, #5b8cff, #9b7cff);
+
+  box-shadow: 0 0 10px rgba(120, 140, 255, 0.35);
+}
+
+.result-score {
+  text-align: right;
+}
+
+.result-score span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 1px;
+}
+
+.result-score strong {
+  color: #ffffff;
+
+  font-size: 1.3rem;
+}
+
+@media (max-width: 800px) {
+  .result-row {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .result-score {
+    text-align: left;
+  }
+}

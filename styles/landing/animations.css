@@ -1,0 +1,64 @@
+/* ===========================
+   STAR BACKGROUND
+=========================== */
+
+#star-container {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: -1;
+
+  pointer-events: none;
+
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+
+  background: white;
+
+  border-radius: 50%;
+
+  opacity: 0.7;
+
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.6);
+  }
+}
+
+/* ===========================
+   LOGO FLOAT
+=========================== */
+
+.logo {
+  animation: floatLogo 6s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

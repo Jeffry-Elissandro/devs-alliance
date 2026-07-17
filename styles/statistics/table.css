@@ -1,0 +1,142 @@
+.stats-table-section {
+  width: min(1100px, 92%);
+  margin: 80px auto;
+}
+
+.table-header {
+  text-align: center;
+
+  margin-bottom: 32px;
+}
+
+.table-kicker {
+  display: block;
+
+  color: #f0c674;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.table-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+.table-header p {
+  max-width: 700px;
+
+  margin: 16px auto 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  line-height: 1.7;
+}
+
+.stats-table-wrapper {
+  overflow-x: auto;
+
+  border-radius: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: rgba(255, 255, 255, 0.035);
+
+  backdrop-filter: blur(14px);
+}
+
+.stats-table {
+  width: 100%;
+
+  min-width: 720px;
+
+  border-collapse: collapse;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 17px 18px;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stats-table th {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.stats-table td {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.9rem;
+}
+
+.stats-table tbody tr {
+  transition: background 0.25s ease;
+}
+
+.stats-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.table-player {
+  color: #ffffff !important;
+
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  font-size: 0.7rem;
+
+  font-weight: 700;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.status-top {
+  color: #ffff26;
+}
+
+.status-elite {
+  color: #5b8cff;
+}
+
+.status-solido {
+  color: #5cff8a;
+}
+
+.status-aceptable {
+  color: #ffb15c;
+}
+
+.status-ineficiente {
+  color: #ff6969;
+}
+
+.table-score {
+  color: #ffffff !important;
+
+  font-weight: 700;
+}

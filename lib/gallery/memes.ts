@@ -10,7 +10,7 @@ export const memes: Meme[] = [
     id: "meme-01",
     title: "Skull-meme del día 💀",
     description:
-      "Feliz jueves!",
-    image: "/assets/gallery/memes/skull_meme_51.png",
+      "el vecino cada domingo:",
+    image: "/assets/gallery/memes/skull_meme_52.png",
   },
 ];

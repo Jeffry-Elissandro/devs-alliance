@@ -57,7 +57,7 @@
 
 .footer-section h2 {
   color: rgba(255, 255, 255, 0.97);
-  font-size: clamp(2rem, 2vw, 2.8rem);
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
@@ -67,6 +67,6 @@
   max-width: 850px;
   margin: 20px auto;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.9rem;
+  line-height: 1;
 }

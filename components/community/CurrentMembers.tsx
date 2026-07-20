@@ -81,9 +81,9 @@ export default function CurrentMembers() {
               </div>
 
               <div className="member-stat">
-                <span>Poder</span>
+                <span>ID</span>
                 <strong>
-                  {selectedMember.power?.toLocaleString("en-US") ?? "—"}
+                  {selectedMember.id}
                 </strong>
               </div>
 

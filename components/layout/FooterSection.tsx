@@ -4,7 +4,7 @@ export default function FooterSection() {
 
       <h2>
 
-        Gracias por visitar DEV'S ALLIANCE
+        ¡Gracias por visitar la Web!
 
       </h2>
 

@@ -8,9 +8,9 @@ export interface ChatPhoto {
 export const chatPhotos: ChatPhoto[] = [
   {
     id: "chat-01",
-    title: "Momentos del Chat 💬",
+    title: "Capturas Random 💬",
     description:
       "Situaciones cursed y surrealistas...",
-    image: "/assets/gallery/chat/chat-01.png",
+    image: "/assets/gallery/chat/chat-02.png",
   },
 ];

@@ -11,20 +11,20 @@ export const landingData = {
 
   info: [
     {
-      title: "Creado por",
-      value: "CHESSDEV",
+      title: "CHESSDEV",
+      value: "creador",
     },
     {
-      title: "Dedicado a",
-      value: "La Comunidad de Skullgirls",
+      title: "Skullgirls Mobile",
+      value: "Comunidad",
     },
     {
-      title: "Servicio de Hosting",
-      value: "Vercel",
+      title: "Vercel",
+      value: "servicio de Hosting",
     },
     {
-      title: "Update Actual",
-      value: "Update V10.70",
+      title: "alpha V1.2",
+      value: "Update actual",
     },
   ],
 };

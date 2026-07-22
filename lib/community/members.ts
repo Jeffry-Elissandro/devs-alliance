@@ -38,5 +38,5 @@ export const currentMembers: CommunityMember[] = [
   { id: "44q9-d4pzh", name: "batgirl", image: "/images/community/members/27.png", message: "Siempre hay espacio para seguir creciendo.", rank: "Miembro", power: 0, favoriteCharacter: "Por definir" },
   { id: "50a8-qj9xj", name: "Shrek embarazado", image: "/images/community/members/28.png", message: "Una nueva historia dentro de la alianza.", rank: "Miembro", power: 0, favoriteCharacter: "Por definir" },
   { id: "2561-bb3g8", name: "k_katsy", image: "/images/community/members/29.png", message: "Un nuevo capítulo dentro de la alianza.", rank: "Miembro", power: 0, favoriteCharacter: "Por definir" },
-  { id: "member-30", name: "DISPONIBLE", image: "/images/community/members/disponible.png", message: "Este espacio espera una nueva historia.", rank: "Por definir", power: 0, favoriteCharacter: "Por definir" },
+  { id: "0nd5-tllka", name: "ssfabinavv", image: "/images/community/members/30.png", message: "Descubriendo nuevos horizontes.", rank: "Miembro", power: 0, favoriteCharacter: "Por definir" },
 ];

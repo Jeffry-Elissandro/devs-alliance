@@ -1,28 +1,27 @@
 import PageTransition from "@/components/transitions/PageTransition";
 import PageLayout from "@/components/shared/PageLayout";
 
-import UnderConstruction from "@/components/shared/UnderConstruction";
+import CommentSection from "@/components/comments/CommentSection";
 
 export default function CommentsPage() {
+
   return (
+
     <PageTransition>
+
       <PageLayout
         hero={{
           title: "Comentarios",
-          subtitle: "Las palabras de quienes forman parte de la comunidad",
+          subtitle: "Comparte tu experiencia con DEV'S ALLIANCE",
           image: "/banners/comments_banner.png",
         }}
         welcome={{
           image: "/images/guide.png",
           title: "¡Bienvenido a Comentarios!",
           text:
-            "Esta sección reunirá opiniones, mensajes y experiencias compartidas por los miembros de DEV'S ALLIANCE.",
+            "Este espacio está pensado para que cualquier visitante pueda compartir su experiencia dentro de DEV'S ALLIANCE. Tu opinión ayuda a mejorar la comunidad y puede servir de orientación para futuros miembros.",
         }}
         nextSections={[
-          {
-            title: "Inicio",
-            href: "/home",
-          },
           {
             title: "Comunidad",
             href: "/community",
@@ -31,10 +30,19 @@ export default function CommentsPage() {
             title: "Galería",
             href: "/gallery",
           },
+          {
+            title: "Inicio",
+            href: "/home",
+          },
         ]}
       >
-        <UnderConstruction />
+
+        <CommentSection />
+
       </PageLayout>
+
     </PageTransition>
+
   );
+
 }

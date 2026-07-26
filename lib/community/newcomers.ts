@@ -8,8 +8,8 @@ export interface NewMember {
 export const newcomers: NewMember[] = [
   {
     id: "newcomer-01",
-    name: "k_katsy",
-    image: "/images/community/members/29.png",
+    name: "ssfabinavv",
+    image: "/images/community/members/30.png",
     message: "Nos alegra tenerte formando parte de la alianza.",
   },
 ];

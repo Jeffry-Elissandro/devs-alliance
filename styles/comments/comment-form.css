@@ -1,0 +1,280 @@
+/* ==========================================================
+   DEV'S ALLIANCE
+   COMMENT FORM
+========================================================== */
+
+.comment-form-section {
+  width: 100%;
+}
+
+.comment-form-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(28px, 3vw, 42px);
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(59, 130, 246, 0.1),
+      transparent 45%
+    ),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.99));
+
+  border: 1px solid rgba(59, 130, 246, 0.22);
+
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.08);
+}
+
+/* ==========================================================
+   CABECERA
+========================================================== */
+
+.comment-form-header {
+  text-align: center;
+
+  margin-bottom: 34px;
+}
+
+.comment-form-icon {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 74px;
+
+  height: 74px;
+
+  margin-bottom: 18px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.28),
+    rgba(59, 130, 246, 0.06)
+  );
+
+  font-size: 2rem;
+
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.22);
+}
+
+.comment-form-header h2 {
+  margin: 0 0 12px;
+
+  color: #f8fafc;
+
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+.comment-form-header p {
+  max-width: 760px;
+
+  margin: auto;
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+}
+
+.comment-form-note {
+  margin-top: 16px !important;
+
+  color: #60a5fa !important;
+
+  font-size: 0.9rem;
+}
+
+/* ==========================================================
+   FORMULARIO
+========================================================== */
+
+.comment-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 26px;
+}
+
+.comment-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.comment-field label {
+  color: #dbeafe;
+
+  font-weight: 600;
+
+  font-size: 0.95rem;
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.comment-field input,
+.comment-field textarea {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border: 1px solid rgba(59, 130, 246, 0.18);
+
+  border-radius: 18px;
+
+  background: rgba(15, 23, 42, 0.72);
+
+  color: white;
+
+  font-size: 0.96rem;
+
+  transition:
+    0.25s border,
+    0.25s box-shadow,
+    0.25s background;
+}
+
+.comment-field textarea {
+  min-height: 180px;
+
+  resize: vertical;
+}
+
+.comment-field input::placeholder,
+.comment-field textarea::placeholder {
+  color: #64748b;
+}
+
+.comment-field input:focus,
+.comment-field textarea:focus {
+  outline: none;
+
+  border-color: rgba(96, 165, 250, 0.75);
+
+  background: rgba(15, 23, 42, 0.88);
+
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* ==========================================================
+   CONTADOR
+========================================================== */
+
+.comment-counter {
+  align-self: flex-end;
+
+  color: #94a3b8;
+
+  font-size: 0.82rem;
+}
+
+/* ==========================================================
+   MENSAJES
+========================================================== */
+
+.comment-error {
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  background: rgba(220, 38, 38, 0.1);
+
+  border: 1px solid rgba(220, 38, 38, 0.25);
+
+  color: #fecaca;
+}
+
+.comment-success {
+  padding: 14px 18px;
+
+  border-radius: 14px;
+
+  background: rgba(22, 163, 74, 0.1);
+
+  border: 1px solid rgba(22, 163, 74, 0.25);
+
+  color: #bbf7d0;
+}
+
+/* ==========================================================
+   BOTÓN
+========================================================== */
+
+.comment-submit-button {
+  align-self: center;
+
+  margin-top: 8px;
+
+  padding: 16px 42px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+  color: white;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.22);
+}
+
+.comment-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 28px rgba(59, 130, 246, 0.3);
+}
+
+.comment-submit-button:active {
+  transform: scale(0.98);
+}
+
+.comment-submit-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+  .comment-form-card {
+    padding: 22px;
+
+    border-radius: 22px;
+  }
+
+  .comment-form-icon {
+    width: 62px;
+
+    height: 62px;
+
+    font-size: 1.7rem;
+  }
+
+  .comment-field textarea {
+    min-height: 150px;
+  }
+}

@@ -1,0 +1,186 @@
+/* ==========================================================
+   DEV'S ALLIANCE
+   COMMENTS
+   ESTRUCTURA GENERAL
+========================================================== */
+
+.comments-section {
+  width: min(1180px, 94%);
+
+  margin: 80px auto 120px;
+}
+
+/* ==========================================================
+   FORMULARIO → COMENTARIOS
+========================================================== */
+
+.comments-divider {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 90px 0 55px;
+
+  text-align: center;
+}
+
+.comments-divider h2 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: clamp(1.55rem, 2vw, 2rem);
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  text-shadow: 0 0 14px rgba(59, 130, 246, 0.35);
+}
+
+.comments-divider p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  line-height: 1.75;
+}
+
+/* ==========================================================
+   CONTENEDOR DE TARJETAS
+========================================================== */
+
+.comment-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 26px;
+}
+
+/* ==========================================================
+   MENSAJE DE CARGA
+========================================================== */
+
+.comments-loading {
+  margin: 70px auto;
+
+  text-align: center;
+
+  color: #94a3b8;
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.4px;
+}
+
+/* ==========================================================
+   SIN COMENTARIOS
+========================================================== */
+
+.empty-comments {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 65px 35px;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(59, 130, 246, 0.18);
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.97)
+  );
+
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.08);
+}
+
+.empty-comments-icon {
+  font-size: 3rem;
+
+  filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.45));
+}
+
+.empty-comments h3 {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: 1.35rem;
+}
+
+.empty-comments p {
+  max-width: 520px;
+
+  margin: 0;
+
+  color: #94a3b8;
+
+  line-height: 1.8;
+}
+
+/* ==========================================================
+   ANIMACIÓN
+========================================================== */
+
+.comment-card,
+.comment-form-card {
+  animation: fadeComments 0.55s ease;
+}
+
+@keyframes fadeComments {
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+  .comments-section {
+    width: 94%;
+
+    margin: 60px auto 90px;
+  }
+
+  .comments-divider {
+    margin: 60px 0 40px;
+  }
+
+  .comments-divider p {
+    font-size: 0.9rem;
+  }
+
+  .empty-comments {
+    padding: 45px 24px;
+  }
+}

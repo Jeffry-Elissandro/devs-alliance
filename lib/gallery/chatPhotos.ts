@@ -10,7 +10,7 @@ export const chatPhotos: ChatPhoto[] = [
     id: "chat-01",
     title: "Capturas Random 💬",
     description:
-      "Situaciones cursed y surrealistas...",
+      "Situaciones cursed sin contexto...",
     image: "/assets/gallery/chat/chat-02.png",
   },
 ];

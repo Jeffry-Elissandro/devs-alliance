@@ -1,38 +1,32 @@
-import { promises as fs } from "fs";
-import path from "path";
-
 import { NextResponse } from "next/server";
 
-const filePath = path.join(
-  process.cwd(),
-  "data",
-  "comments.json"
-);
-
-async function readComments() {
-
-  try {
-
-    const file = await fs.readFile(
-      filePath,
-      "utf8"
-    );
-
-    return JSON.parse(file);
-
-  } catch {
-
-    return [];
-
-  }
-
-}
+import {
+  addComment,
+  getComments,
+} from "@/services/comments/commentsService";
 
 export async function GET() {
 
-  const comments = await readComments();
+  try {
 
-  return NextResponse.json(comments);
+    const comments = await getComments();
+
+    return NextResponse.json(comments);
+
+  } catch (error) {
+
+    console.error(error);
+
+    return NextResponse.json(
+      {
+        error: "No fue posible obtener los comentarios.",
+      },
+      {
+        status: 500,
+      }
+    );
+
+  }
 
 }
 
@@ -44,61 +38,40 @@ export async function POST(
 
     const body = await request.json();
 
-    const comments = await readComments();
+    if (
+      !body.nickname?.trim() ||
+      !body.message?.trim()
+    ) {
 
-    const newComment = {
+      return NextResponse.json(
+        {
+          error:
+            "Nickname y comentario son obligatorios.",
+        },
+        {
+          status: 400,
+        }
+      );
 
-      id: Date.now().toString(),
+    }
 
-      nickname: body.nickname,
+    const comment = await addComment({
 
-      message: body.message,
+      nickname: body.nickname.trim(),
 
-      createdAt: new Date().toISOString(),
+      message: body.message.trim(),
 
       member:
-        body.code?.trim().toLowerCase() === "monika",
+        body.code?.trim() ===
+        process.env.DEV_MEMBER_CODE,
 
-      featured: false,
-
-      likes: 0,
-
-      visible: true,
-
-    };
-
-    comments.unshift(newComment);
-
-    await fs.writeFile(
-
-      filePath,
-
-      JSON.stringify(
-        comments,
-        null,
-        2
-      ),
-
-      "utf8"
-
-    );
+    });
 
     return NextResponse.json(
-
+      comment,
       {
-
-        success: true,
-
-        comment: newComment,
-
-      },
-
-      {
-
         status: 201,
-
       }
-
     );
 
   } catch (error) {
@@ -106,22 +79,13 @@ export async function POST(
     console.error(error);
 
     return NextResponse.json(
-
       {
-
-        success: false,
-
         error:
           "No fue posible guardar el comentario.",
-
       },
-
       {
-
         status: 500,
-
       }
-
     );
 
   }

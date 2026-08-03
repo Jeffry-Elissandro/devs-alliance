@@ -8,13 +8,13 @@ export default function StrategyPage() {
     <PageTransition>
       <PageLayout
         hero={{
-          title: "Estrategia",
+          title: "Estrategias",
           subtitle: "Conocimiento, coordinación y preparación para avanzar",
           image: "/banners/strategy_banner.png",
         }}
         welcome={{
           image: "/images/guide.png",
-          title: "¡Bienvenido a Estrategia!",
+          title: "¡Bienvenido a Estrategias!",
           text:
             "Esta sección estará dedicada a estrategias, recomendaciones y conocimientos útiles para que los miembros puedan mejorar su rendimiento dentro de Skullgirls Mobile.",
         }}

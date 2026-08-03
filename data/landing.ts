@@ -23,7 +23,7 @@ export const landingData = {
       value: "servicio de Hosting",
     },
     {
-      title: "alpha V1.4",
+      title: "alpha V1.5",
       value: "Update actual",
     },
   ],

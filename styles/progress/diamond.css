@@ -1,0 +1,664 @@
+/* =========================================================
+   DIAMOND PROGRESS
+========================================================= */
+
+.diamond-progress {
+  --progress: 0%;
+
+  position: relative;
+  width: auto;
+  min-height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 24px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  margin: 100px 40px;
+
+  /*
+    CAMBIA ESTA RUTA POR LA DEL GIF REAL
+    DENTRO DE /public
+  */
+  background-image:
+    linear-gradient(135deg, rgba(8, 8, 18, 0.72), rgba(18, 18, 30, 0.64)),
+    url("/backgrounds/score_guild.gif");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  isolation: isolate;
+
+  transition:
+    border-color 0.8s ease,
+    box-shadow 0.8s ease;
+}
+
+/* =========================================================
+   CAPA CRISTALINA
+========================================================= */
+
+.diamond-progress::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.012)
+  );
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   TONALIDAD DEL ESTADO
+========================================================= */
+
+.diamond-progress[data-state="none"] {
+  border-color: rgba(148, 163, 184, 0.12);
+}
+
+.diamond-progress[data-state="bronze"] {
+  border-color: rgba(205, 127, 50, 0.28);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    0 0 35px rgba(205, 127, 50, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.diamond-progress[data-state="silver"] {
+  border-color: rgba(226, 232, 240, 0.2);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    0 0 35px rgba(226, 232, 240, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.diamond-progress[data-state="gold"] {
+  border-color: rgba(250, 204, 21, 0.28);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    0 0 40px rgba(250, 204, 21, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.diamond-progress[data-state="diamond"] {
+  border-color: rgba(255, 79, 216, 0.38);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.28),
+    0 0 45px rgba(255, 42, 203, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.diamond-progress-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.diamond-progress--started .diamond-progress-content {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.diamond-progress-header {
+  text-align: center;
+
+  margin-bottom: 48px;
+}
+
+.diamond-progress-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.diamond-progress-header h2 {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+
+  color: #ffffff;
+
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+.diamond-progress-header p {
+  max-width: 620px;
+
+  margin: 14px auto 0;
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* =========================================================
+   DISPLAY PRINCIPAL
+========================================================= */
+
+.diamond-progress-display {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 280px;
+
+  align-items: center;
+
+  gap: 42px;
+
+  padding: 34px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.065),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* =========================================================
+   BARRA
+========================================================= */
+
+.diamond-progress-visual {
+  width: 100%;
+}
+
+.diamond-progress-bar {
+  --progress: 0%;
+
+  position: relative;
+
+  width: 100%;
+  height: 18px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.55),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* =========================================================
+   PARTE LLENA
+========================================================= */
+
+.diamond-progress-fill {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: var(--progress);
+  height: 100%;
+
+  min-width: 0;
+
+  border-radius: inherit;
+
+  transform-origin: left center;
+
+  transition:
+    width 2s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.6s ease,
+    box-shadow 0.6s ease;
+
+  background: linear-gradient(135deg, #64748b 0%, #475569 50%, #334155 100%);
+
+  box-shadow: 0 0 10px rgba(100, 116, 139, 0.25);
+}
+
+/* =========================================================
+   ESTADO NONE
+========================================================= */
+
+.diamond-progress[data-state="none"] .diamond-progress-fill {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 50%, #475569 100%);
+
+  box-shadow: 0 0 10px rgba(148, 163, 184, 0.25);
+}
+
+/* =========================================================
+   ESTADO BRONCE
+========================================================= */
+
+.diamond-progress[data-state="bronze"] .diamond-progress-fill {
+  background: linear-gradient(135deg, #cd7f32 0%, #b87333 50%, #8f5528 100%);
+
+  box-shadow: 0 0 14px rgba(205, 127, 50, 0.45);
+}
+
+/* =========================================================
+   ESTADO PLATA
+========================================================= */
+
+.diamond-progress[data-state="silver"] .diamond-progress-fill {
+  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 45%, #64748b 100%);
+
+  box-shadow: 0 0 16px rgba(226, 232, 240, 0.45);
+}
+
+/* =========================================================
+   ESTADO ORO
+========================================================= */
+
+.diamond-progress[data-state="gold"] .diamond-progress-fill {
+  background: linear-gradient(135deg, #fef3a8 0%, #facc15 45%, #ca8a04 100%);
+
+  box-shadow: 0 0 18px rgba(250, 204, 21, 0.5);
+}
+
+/* =========================================================
+   ESTADO DIAMANTE
+========================================================= */
+
+.diamond-progress[data-state="diamond"] .diamond-progress-fill {
+  background: linear-gradient(
+    135deg,
+    #ff8bea 0%,
+    #ff4fd8 35%,
+    #ff2acb 65%,
+    #d946ef 100%
+  );
+
+  box-shadow:
+    0 0 22px rgba(255, 42, 203, 0.7),
+    0 0 45px rgba(255, 42, 203, 0.22);
+}
+
+/* =========================================================
+   PARTE FALTANTE
+========================================================= */
+
+.diamond-progress-shimmer {
+  position: absolute;
+
+  top: 0;
+
+  left: var(--progress);
+
+  width: calc(100% - var(--progress));
+  height: 100%;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  border-radius: 0 999px 999px 0;
+
+  /*
+    La zona faltante conserva el fondo oscuro
+    de la barra.
+  */
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.025),
+    rgba(0, 0, 0, 0.08)
+  );
+}
+
+/* =========================================================
+   ANIMACIÓN DEL BRILLO
+========================================================= */
+
+.diamond-progress-shimmer::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 55%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 25%,
+    rgba(255, 255, 255, 0.72) 50%,
+    rgba(255, 255, 255, 0.04) 75%,
+    transparent 100%
+  );
+
+  transform: translateX(-150%);
+
+  opacity: 0;
+}
+
+.diamond-progress--started .diamond-progress-shimmer::after {
+  animation: diamondProgressShimmer 2.6s ease-in-out 0.5s infinite;
+}
+
+/* =========================================================
+   ANIMACIÓN SHIMMER
+========================================================= */
+
+@keyframes diamondProgressShimmer {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   INFORMACIÓN
+========================================================= */
+
+.diamond-progress-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  padding-left: 28px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================================
+   SCORE
+========================================================= */
+
+.diamond-progress-score {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.diamond-progress-score strong {
+  font-size: 1.8rem;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.diamond-progress-score span {
+  font-size: 0.78rem;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================================================
+   PORCENTAJE
+========================================================= */
+
+.diamond-progress-percentage {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+}
+
+.diamond-progress-percentage strong {
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  color: #ff4fd8;
+
+  text-shadow: 0 0 12px rgba(255, 79, 216, 0.35);
+
+  transition:
+    color 0.6s ease,
+    text-shadow 0.6s ease;
+}
+
+.diamond-progress[data-state="none"] .diamond-progress-percentage strong {
+  color: #cbd5e1;
+  text-shadow: none;
+}
+
+.diamond-progress[data-state="bronze"] .diamond-progress-percentage strong {
+  color: #cd7f32;
+  text-shadow: 0 0 12px rgba(205, 127, 50, 0.35);
+}
+
+.diamond-progress[data-state="silver"] .diamond-progress-percentage strong {
+  color: #e2e8f0;
+  text-shadow: 0 0 12px rgba(226, 232, 240, 0.35);
+}
+
+.diamond-progress[data-state="gold"] .diamond-progress-percentage strong {
+  color: #facc15;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.4);
+}
+
+.diamond-progress[data-state="diamond"] .diamond-progress-percentage strong {
+  color: #ff4fd8;
+  text-shadow: 0 0 14px rgba(255, 79, 216, 0.5);
+}
+
+.diamond-progress-percentage span {
+  font-size: 0.72rem;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================================================
+   RANGO
+========================================================= */
+
+.diamond-progress-rank {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.diamond-progress-rank-label {
+  font-size: 0.68rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.diamond-progress-rank strong {
+  font-size: 1.05rem;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+  .diamond-progress {
+    min-height: auto;
+
+    padding: 60px 18px;
+  }
+
+  .diamond-progress-display {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 26px;
+  }
+
+  .diamond-progress-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    padding-left: 0;
+
+    border-left: none;
+  }
+
+  .diamond-progress-rank {
+    padding-top: 0;
+
+    border-top: none;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MÓVIL
+========================================================= */
+
+@media (max-width: 520px) {
+  .diamond-progress {
+    padding: 48px 14px;
+
+    border-radius: 18px;
+  }
+
+  .diamond-progress-header {
+    margin-bottom: 32px;
+  }
+
+  .diamond-progress-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .diamond-progress-header p {
+    font-size: 0.85rem;
+  }
+
+  .diamond-progress-display {
+    padding: 22px 18px;
+
+    border-radius: 16px;
+  }
+
+  .diamond-progress-bar {
+    height: 16px;
+  }
+
+  .diamond-progress-info {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .diamond-progress-score strong {
+    font-size: 1.55rem;
+  }
+
+  .diamond-progress-percentage strong {
+    font-size: 1.2rem;
+  }
+
+  .diamond-progress-rank {
+    padding-top: 14px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* =========================================================
+   REDUCCIÓN DE MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .diamond-progress-content,
+  .diamond-progress-fill {
+    transition: none;
+  }
+
+  .diamond-progress-shimmer::after {
+    animation: none;
+  }
+}

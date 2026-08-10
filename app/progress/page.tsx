@@ -1,7 +1,11 @@
 import PageTransition from "@/components/transitions/PageTransition";
 import PageLayout from "@/components/shared/PageLayout";
 
-import UnderConstruction from "@/components/shared/UnderConstruction";
+import DiamondProgress from "@/components/progress/DiamondProgress";
+import FinalClassification from "@/components/progress/FinalClassification";
+import RewardsSection from "@/components/progress/RewardsSection";
+import ScoreBoard from "@/components/progress/ScoreBoard";
+import TeamMessage from "@/components/progress/TeamMessage";
 
 export default function ProgressPage() {
   return (
@@ -10,7 +14,7 @@ export default function ProgressPage() {
         hero={{
           title: "Progreso",
           subtitle: "El crecimiento de la alianza y sus miembros",
-          image: "/banners/progress_banner.png",
+          image: "/banners/progress_banner_02.png",
         }}
         welcome={{
           image: "/images/guide.png",
@@ -33,7 +37,15 @@ export default function ProgressPage() {
           },
         ]}
       >
-        <UnderConstruction />
+        <DiamondProgress />
+
+        <ScoreBoard />
+
+        <FinalClassification />
+
+        <RewardsSection />
+        
+        <TeamMessage />
       </PageLayout>
     </PageTransition>
   );

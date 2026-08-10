@@ -46,6 +46,12 @@ import "@/styles/comments/comments.css";
 import "@/styles/comments/comment-form.css";
 import "@/styles/comments/comment-card.css";
 
+import "@/styles/progress/classification.css";
+import "@/styles/progress/diamond.css";
+import "@/styles/progress/rewards.css";
+import "@/styles/progress/scoreboard.css";
+import "@/styles/progress/team-message.css";
+
 export const metadata: Metadata = {
   title: "DEV'S ALLIANCE",
   description: "Comunidad oficial del gremio DEV'S ALLIANCE de Skullgirls Mobile.",

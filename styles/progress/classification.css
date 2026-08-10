@@ -1,0 +1,259 @@
+/* =========================================================
+   FINAL CLASSIFICATION
+   ========================================================= */
+
+.final-classification {
+  width: auto;
+  padding: 75px 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  margin: 100px 40px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 15, 24, 0.92),
+    rgba(28, 25, 38, 0.78)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.final-classification::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -150px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(250, 204, 21, 0.13),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.final-classification-header {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.final-classification-header > span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.final-classification-header h2 {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.final-classification-header p {
+  max-width: 600px;
+
+  margin: 14px auto 0;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================================
+   PODIO
+   ========================================================= */
+
+.final-classification-podium {
+  position: relative;
+  z-index: 1;
+
+  max-width: 820px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 55px;
+
+  padding: 38px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.final-classification-result {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 8px;
+}
+
+.final-classification-icon {
+  width: 160px;
+  height: 160px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 5px;
+
+  border-radius: 50%;
+
+  font-size: 1.8rem;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.08);
+}
+
+.final-classification-result > span {
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.final-classification-result strong {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   DIVISOR
+   ========================================================= */
+
+.final-classification-divider {
+  width: 1px;
+  height: 120px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .final-classification {
+    padding: 55px 16px;
+  }
+
+  .final-classification-header {
+    margin-bottom: 35px;
+  }
+
+  .final-classification-podium {
+    gap: 25px;
+
+    padding: 28px 16px;
+  }
+
+  .final-classification-icon {
+    width: 120px;
+    height: 120px;
+
+    font-size: 1.45rem;
+  }
+
+  .final-classification-result strong {
+    font-size: 2.25rem;
+  }
+
+  .final-classification-divider {
+    height: 95px;
+  }
+}
+
+@media (max-width: 420px) {
+  .final-classification {
+    border-radius: 18px;
+  }
+
+  .final-classification-podium {
+    gap: 15px;
+
+    padding: 25px 10px;
+  }
+
+  .final-classification-result > span {
+    font-size: 0.6rem;
+  }
+
+  .final-classification-result strong {
+    font-size: 1.9rem;
+  }
+}

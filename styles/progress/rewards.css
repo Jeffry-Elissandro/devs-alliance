@@ -1,0 +1,244 @@
+/* =========================================================
+   REWARDS
+   ========================================================= */
+
+.rewards-section {
+  width: auto;
+
+  padding: 70px 24px;
+
+  position: relative;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(13, 15, 25, 0.9),
+    rgba(24, 28, 42, 0.76)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+
+  margin-top: 100px;
+
+  margin: 100px 40px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.rewards-section-header {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.rewards-section-header > span {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.rewards-section-header h2 {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.rewards-section-header p {
+  max-width: 600px;
+
+  margin: 13px auto 0;
+
+  font-size: 0.9rem;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================================
+   LISTA DE RECOMPENSAS
+   ========================================================= */
+
+.rewards-list {
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+/* =========================================================
+   RECOMPENSA INDIVIDUAL
+   ========================================================= */
+
+.reward-item {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  min-height: 180px;
+
+  padding: 20px 12px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.reward-item:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(255, 255, 255, 0.14);
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.075),
+    rgba(255, 255, 255, 0.025)
+  );
+}
+
+/* =========================================================
+   ICONO
+   ========================================================= */
+
+.reward-icon {
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 16px;
+
+  font-size: 1.8rem;
+
+  color: #f5d0fe;
+
+  background: rgba(217, 70, 239, 0.08);
+
+  border: 1px solid rgba(217, 70, 239, 0.15);
+
+  box-shadow: 0 0 20px rgba(217, 70, 239, 0.08);
+}
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.reward-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 4px;
+
+  text-align: center;
+}
+
+.reward-info span {
+  font-size: 0.72rem;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.reward-info strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .rewards-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .reward-item {
+    min-height: 155px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MÓVIL
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .rewards-section {
+    padding: 50px 14px;
+
+    border-radius: 18px;
+  }
+
+  .rewards-section-header {
+    margin-bottom: 30px;
+  }
+
+  .rewards-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+  .reward-item {
+    min-height: 145px;
+
+    padding: 16px 10px;
+  }
+
+  .reward-icon {
+    width: 54px;
+    height: 54px;
+
+    font-size: 1.5rem;
+  }
+
+  .reward-info strong {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,247 @@
+/* =========================================================
+   SCOREBOARD
+   ========================================================= */
+
+.score-board {
+  width: auto;
+  padding: 70px 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  margin: 100px 40px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(12, 14, 24, 0.9),
+    rgba(24, 26, 42, 0.78)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.score-board::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 20% 50%,
+    rgba(168, 85, 247, 0.12),
+    transparent 35%
+  );
+
+  pointer-events: none;
+}
+
+.score-board-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+/* =========================================================
+   LOGOTIPO
+   ========================================================= */
+
+.score-board-logo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.score-board-logo-placeholder {
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.025)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 0 35px rgba(168, 85, 247, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.score-board-info {
+  text-align: left;
+}
+
+.score-board-position-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.score-board-position {
+  display: block;
+
+  font-size: clamp(3.2rem, 7vw, 5.2rem);
+  line-height: 0.95;
+  font-weight: 900;
+
+  color: #ffffff;
+
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+.score-board-info h2 {
+  margin: 14px 0 20px;
+
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.score-board-score {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 9px;
+}
+
+.score-board-score strong {
+  font-size: 1.35rem;
+
+  color: #f0abfc;
+}
+
+.score-board-score span {
+  font-size: 0.8rem;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================================================
+   DESCRIPCIÓN
+   ========================================================= */
+
+.score-board-note {
+  position: relative;
+  z-index: 1;
+
+  max-width: 900px;
+
+  margin: 34px auto 0;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  text-align: center;
+
+  font-size: 0.78rem;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .score-board {
+    padding: 55px 18px;
+  }
+
+  .score-board-content {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    text-align: center;
+  }
+
+  .score-board-logo-placeholder {
+    width: 135px;
+    height: 135px;
+
+    font-size: 1.1rem;
+  }
+
+  .score-board-info {
+    text-align: center;
+  }
+
+  .score-board-position-label {
+    margin-bottom: 8px;
+  }
+
+  .score-board-position {
+    font-size: 4rem;
+  }
+
+  .score-board-info h2 {
+    margin-top: 12px;
+  }
+
+  .score-board-score {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .score-board {
+    padding: 45px 14px;
+
+    border-radius: 18px;
+  }
+
+  .score-board-position {
+    font-size: 3.3rem;
+  }
+
+  .score-board-info h2 {
+    font-size: 1.25rem;
+  }
+}

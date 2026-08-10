@@ -11,6 +11,6 @@ export const chatPhotos: ChatPhoto[] = [
     title: "Capturas Random 💬",
     description:
       "Situaciones cursed sin contexto...",
-    image: "/assets/gallery/chat/chat-02.png",
+    image: "/assets/gallery/chat/chat-03.png",
   },
 ];

@@ -3,9 +3,9 @@ export const data = {
   // TEMPORADA ACTUAL
   // ========================================
 
-  score_actual: 2040,
+  score_actual: 17885,
 
-  posición_top: 333,
+  posición_top: 165,
 
   // ========================================
   // TEMPORADA FINALIZADA

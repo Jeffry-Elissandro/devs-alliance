@@ -52,6 +52,8 @@ import "@/styles/progress/rewards.css";
 import "@/styles/progress/scoreboard.css";
 import "@/styles/progress/team-message.css";
 
+import "@/styles/under-construction.css";
+
 export const metadata: Metadata = {
   title: "DEV'S ALLIANCE",
   description: "Comunidad oficial del gremio DEV'S ALLIANCE de Skullgirls Mobile.",

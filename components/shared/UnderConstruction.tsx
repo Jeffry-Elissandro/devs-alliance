@@ -1,6 +1,6 @@
 export default function UnderConstruction() {
   return (
-    <section className="under-construction">
+    <section className="under-construction-content">
       <div className="under-construction-icon">
         🚧
       </div>
